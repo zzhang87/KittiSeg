@@ -1,7 +1,7 @@
 {
   "model": {
     "input_file": "../inputs/kitti_seg_input.py",
-    "architecture_file" : "../encoder/my_resnet.py",
+    "architecture_file" : "../encoder/mobilenet.py",
     "objective_file" : "../decoder/fcn.py",
     "optimizer_file" : "../optimizer/generic_optimizer.py",
     "evaluator_file" : "../evals/kitti_eval.py"
@@ -19,7 +19,6 @@
   },
  
   "arch": {
-    "layers": 50,
     "num_classes" : 2,
     "image_size" : 50,
     "weight": [1, 2],
@@ -49,10 +48,10 @@
 
   "logging": {
     "display_iter": 50,
-    "eval_iter": 500,
-    "write_iter": 500,
-    "save_iter": 1000,
-    "image_iter": 20000
+    "eval_iter": 300,
+    "write_iter": 200,
+    "save_iter": 200,
+    "image_iter": 200
   },
 
   "solver": {
@@ -63,7 +62,7 @@
       "threads": 4,
       "learning_rate": 1e-5,
       "learning_rate_step": null,
-      "max_steps": 12000
+      "max_steps": 500
   },
   "use_fc_wd": true,
   "loss": "xentropy",

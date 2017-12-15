@@ -14,6 +14,7 @@ from seg_utils import seg_utils as seg
 
 import tensorflow as tf
 import time
+import logging
 
 import tensorvision
 import tensorvision.utils as utils
@@ -104,6 +105,7 @@ def evaluate(hypes, sess, image_pl, inf_out):
                     feed_dict = {image_pl: input_image}
 
                     output = sess.run([softmax], feed_dict=feed_dict)
+
                     output_im = output[0][:, 1].reshape(shape[0], shape[1])
 
                     if hypes['jitter']['fix_shape']:

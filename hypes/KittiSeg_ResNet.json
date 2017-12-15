@@ -19,7 +19,7 @@
   },
  
   "arch": {
-    "layers": 101,
+    "layers": 50,
     "num_classes" : 2,
     "image_size" : 50,
     "weight": [1, 2],
@@ -49,8 +49,8 @@
 
   "logging": {
     "display_iter": 50,
-    "eval_iter": 250,
-    "write_iter": 250,
+    "eval_iter": 1000,
+    "write_iter": 1000,
     "save_iter": 2000,
     "image_iter": 20000
   },
@@ -63,13 +63,13 @@
       "threads": 4,
       "learning_rate": 1e-5,
       "learning_rate_step": null,
-      "max_steps": 8000
+      "max_steps": 12000
   },
   "use_fc_wd": true,
   "loss": "xentropy",
   "clip_norm" : 1.0,
   "wd": 5e-4,
-  "load_pretrained": true,
+  "load_pretrained": false,
   "use_moving_average_bn": true,
   "scale_down": 0.5
 }

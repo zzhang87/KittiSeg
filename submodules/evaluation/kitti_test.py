@@ -41,7 +41,7 @@ else:
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 
-test_file = 'data_road/testing.txt'
+test_file = 'farm/testing.txt'
 
 
 def create_test_output(hypes, sess, image_pl, softmax):

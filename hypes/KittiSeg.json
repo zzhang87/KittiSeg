@@ -6,15 +6,16 @@
     "optimizer_file" : "../optimizer/generic_optimizer.py",
     "evaluator_file" : "../evals/kitti_eval.py"
   },
+  
   "path": ["../incl"],
 
   "data": {
-    "train_file" : "data_road/train3.txt",
-    "val_file" : "data_road/val3.txt",
+    "train_file" : "farm/train.txt",
+    "val_file" : "farm/val.txt",
     "road_color" : [255,0,255],
     "background_color" : [255,0,0],
     "vgg_url": "ftp://mi.eng.cam.ac.uk/pub/mttt2/models/vgg16.npy",
-    "kitti_url": ""
+    "kitti_url": "http://kitti.is.tue.mpg.de/kitti/data_road.zip"
   },
  
   "arch": {
@@ -40,15 +41,15 @@
     "crop_chance": 0.8,
     "fix_shape": false,
     "reseize_image": false,
-    "image_height" : 384,
-    "image_width" : 1248,
+    "image_height" : 1080,
+    "image_width" : 1920,
 
     "augment_level": 0
   },
 
   "logging": {
     "display_iter": 20,
-    "eval_iter": 100,
+    "eval_iter": 500,
     "write_iter": 100,
     "save_iter": 2000,
     "image_iter": 20000
